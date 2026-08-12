@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>朱若楠 Nora — Portfolio</title>
+  <script>
+    // SPA fallback: redirect 404 to index.html via sessionStorage,
+    // then index.html reads it back for client-side routing.
+    const path = sessionStorage.getItem('redirectPath');
+    const current = location.pathname.replace(/\/$/, '') || '/';
+    if (!path) {
+      sessionStorage.setItem('redirectPath', current);
+    }
+    location.replace('/nora-portfolio/');
+  </script>
+</head>
+<body></body>
+</html>
