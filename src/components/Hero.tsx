@@ -1,4 +1,5 @@
 import { hero } from '../data/content'
+import { asset } from '../utils'
 
 export default function Hero() {
   return (
@@ -9,7 +10,7 @@ export default function Hero() {
           <div className="w-56 h-56 md:w-72 md:h-72 rounded-2xl overflow-hidden bg-[#E5E5E7]">
             {hero.photo ? (
               <img
-                src={hero.photo}
+                src={asset(hero.photo)}
                 alt={hero.name}
                 className="w-full h-full object-contain object-top bg-[#F5F5F7]"
               />

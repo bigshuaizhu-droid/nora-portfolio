@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import { Project } from '../data/content'
+import { asset } from '../utils'
 
 export default function ProjectDetail({ project, onClose }: { project: Project; onClose: () => void }) {
   useEffect(() => {
@@ -60,7 +61,7 @@ export default function ProjectDetail({ project, onClose }: { project: Project; 
                   className="rounded-lg overflow-hidden bg-[#F5F5F7] border border-[#E5E5E7]"
                 >
                   <img
-                    src={img}
+                    src={asset(img)}
                     alt={`${project.title} - ${i + 1}`}
                     className="w-full h-auto object-contain max-h-[70vh] mx-auto"
                     loading="lazy"

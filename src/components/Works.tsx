@@ -1,4 +1,5 @@
 import { projects, Project } from '../data/content'
+import { asset } from '../utils'
 
 export default function Works({ onSelectProject }: { onSelectProject: (p: Project) => void }) {
   const primaryProjects = projects.filter((p) => p.weight === 'primary')
@@ -21,7 +22,7 @@ export default function Works({ onSelectProject }: { onSelectProject: (p: Projec
               <div className="bg-[#1A1A1A] rounded-lg hover:bg-[#242424] transition-colors overflow-hidden">
                 {project.images[0] && (
                   <img
-                    src={project.images[0]}
+                    src={asset(project.images[0])}
                     alt={project.title}
                     className="w-full h-72 object-cover opacity-80 group-hover:opacity-100 transition-opacity"
                   />
@@ -55,7 +56,7 @@ export default function Works({ onSelectProject }: { onSelectProject: (p: Projec
               <div className="border border-[#E5E5E7] rounded-lg overflow-hidden hover:border-[#86868B] transition-colors">
                 {project.images[0] && (
                   <img
-                    src={project.images[0]}
+                    src={asset(project.images[0])}
                     alt={project.title}
                     className="w-full aspect-[2/1] object-cover object-top"
                   />
