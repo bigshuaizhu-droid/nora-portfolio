@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        inter: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+        inter: ['system-ui', '-apple-system', 'PingFang SC', 'Microsoft YaHei', 'Hiragino Sans GB', 'WenQuanYi Micro Hei', 'sans-serif'],
       },
       colors: {
         'bg-primary': '#FAFAFA',

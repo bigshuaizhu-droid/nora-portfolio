@@ -5,9 +5,7 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="朱若楠 Nora — B2B Marketing · Market Events · To G Projects" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <!-- 使用系统原生字体，无需外部加载，避免 Google Fonts 被墙导致白屏 -->
     <link rel="preload" as="image" href="/images/photos/portrait.jpg" />
     <title>朱若楠 Nora — Portfolio</title>
   </head>
@@ -22,6 +20,17 @@
       </div>
       <style>@keyframes spin{to{transform:rotate(360deg)}}</style>
     </div>
+    <!-- SPA 路由回退：从 404.html 恢复原始路径 -->
+    <script>
+      (function() {
+        var p = sessionStorage.getItem('redirectPath');
+        if (p && p !== '/nora-portfolio/' && p !== '/nora-portfolio') {
+          sessionStorage.removeItem('redirectPath');
+          var clean = p.replace(/\/nora-portfolio/, '').replace(/\/$/, '') || '/';
+          history.replaceState(null, '', '/nora-portfolio/#' + clean);
+        }
+      })();
+    </script>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

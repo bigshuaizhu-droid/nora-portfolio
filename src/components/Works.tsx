@@ -25,6 +25,7 @@ export default function Works({ onSelectProject }: { onSelectProject: (p: Projec
                     src={asset(project.images[0])}
                     alt={project.title}
                     className="w-full h-72 object-cover opacity-80 group-hover:opacity-100 transition-opacity"
+                    loading="lazy"
                   />
                 )}
                 <div className="p-8 md:p-12">
@@ -59,6 +60,7 @@ export default function Works({ onSelectProject }: { onSelectProject: (p: Projec
                     src={asset(project.images[0])}
                     alt={project.title}
                     className="w-full aspect-[2/1] object-cover object-top"
+                    loading="lazy"
                   />
                 )}
                 <div className="p-6">
