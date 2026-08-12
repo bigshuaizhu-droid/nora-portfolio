@@ -1,0 +1,9 @@
+node_modules/
+dist/
+.env*
+.vercel
+.DS_Store
+_raw_source/
+.workbuddy/
+outputs/
+tsconfig.tsbuildinfo
